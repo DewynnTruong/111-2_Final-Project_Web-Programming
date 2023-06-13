@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Antique&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Shippori Antique', sans-serif;
+        }
+        .container{
+            width: 100%;
+            height: 100vh;
+            background-image: url("照片/bg_工作區域\ 1_工作區域\ 1.png");
+            background-size: cover;
+            background-position: center;
+            padding-left: 8%;
+            padding-right: 8%;
+            box-sizing: border-box;
+        }
+        nav{
+            display: flex;
+            width: 100%;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 5px 0;
+        }
+
+        nav ul{
+            flex: 1;
+            text-align: right;
+            padding-right: 10px;
+        }
+
+        nav ul li{
+            display: inline-block;
+            list-style: none;
+            margin: 10px 15px;
+        }
+
+        nav ul li a{
+            color: #fff;
+            text-decoration: none;
+            position: relative;
+            font-size: large;
+        }
+
+        nav ul li a::after{
+            content: '';
+            width: 0%;
+            height: 3px;
+            position: absolute;
+            bottom: -6px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #fff;
+            transition: width 0.3s;
+        }
+
+        nav ul li a:hover::after{
+            width: 50%;
+        }
+
+        .row{
+            display: flex;
+            height: 88%;
+            align-items: center;
+        }
+
+        .col{
+            flex-basis: 50%;
+        }
+
+        h1{
+            color: #fff;
+            font-size: 100px;
+        }
+
+        p{
+            color: #fff;
+            font-size: 18px;
+            line-height: 25px;
+        }
+
+        .card{
+            width: 260px;
+            height: 260px;
+            display: inline-block;
+            border-radius: 10px;
+            padding: 15px 25px;
+            box-sizing: border-box;
+            cursor: pointer;
+            margin: 10px 15px;
+            background-position: center;
+            background-size: cover;
+            transition: transform 0.5s;
+            margin-bottom: 20px;
+            
+        }
+
+        .card1{            
+            background-image: url('照片/東坡肉.png');
+        }
+
+        .card2{            
+            background-image: url('照片/空心菜炒牛肉.png');
+        }
+        .card3{
+            background-image: url('照片/春捲.png');
+        }
+
+        .card4{            
+            background-image: url('照片/菜脯蛋.png');
+        }
+
+        .card1:hover{
+            transform: translateY(-10px);
+            background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url('照片/東坡肉.png');
+            content:'炒飯';
+        }
+
+        .card2:hover{
+            transform: translateY(-10px);
+            background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url('照片/空心菜炒牛肉.png');
+        }
+
+        .card3:hover{
+            transform: translateY(-10px);
+            background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url('照片/春捲.png');
+        }
+
+        .card4:hover{
+            transform: translateY(-10px);
+            background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url('照片/菜脯蛋.png');
+        }
+        nav img{
+            border-radius: 50%;
+            width: 8%;
+            margin-right: 1%;
+            margin-top: 1%;
+        }
+        nav img:hover{
+            transform: translateY(-10px);
+        }
+
+        nav img.back{
+            float: left;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar">            
+            <nav style="text-align: right;">
+                <div class="back">
+                <a href="recipe.html"><img src="照片/back.png" class="back"></a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <h1>菜餚</h1>
+                <p>快炒店一直都是台灣人最愛的餐廳首選</p>
+                <p>尤其是空心菜炒牛肉更是經典</p>
+                <p>春捲也是越南的著名美食之一</p>
+                <p>讓我們一起來動手製作料理吧！</p>
+                
+            </div>
+            <div class="col">
+                <a href="東坡肉.html"><div class="card card1"></div></a>
+                <a href="空心菜炒牛肉.html"><div class="card card2"></div></a>
+                <a href="春捲.html"><div class="card card3"></div></a>
+                <a href="菜脯蛋.html"><div class="card card4"></div></a>
+        </div>
+    </div>    
+</body>
+
+</html>
